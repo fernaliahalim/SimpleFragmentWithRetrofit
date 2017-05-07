@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.app.fernaliahalim.simplefragment.Model.Barang;
+import com.app.fernaliahalim.simplefragment.RetrofitClient.RetrofitClient;
 import com.app.fernaliahalim.simplefragment.Service.APIService;
 
 import retrofit2.Call;
@@ -27,6 +28,7 @@ public class TambahBarang extends AppCompatActivity {
         etstock = (EditText) findViewById(R.id.editTextStock);
         etsupplier = (EditText) findViewById(R.id.editTextsupplier);
         btnsave = (Button) findViewById(R.id.btnsave);
+        apiservice = RetrofitClient.getApiService();
 
         btnsave.setOnClickListener(new View.OnClickListener() {
             @Override
